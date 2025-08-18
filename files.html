@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files | HTML5 Desktop Sim</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">Back to desktop</a>
+        <details>
+            <summary>Launcher</summary>
+            <nav id="app-launcher-nav" aria-label="app launcher">
+                <ul>
+                    <li><a href="./files.html" aria-describedby="files-app-description">Files</a>
+                    <p id="files-app-description">
+                    Browse files.
+                    </p>
+                    </li>
+                    <li><a href="./media.html" aria-describedby="media-app-description">Media</a>
+                    <p id="media-app-description">
+                    Play media.
+                    </p>
+                    </li>
+                    <li><a href="./settings.html" aria-describedby="settings-app-description">Settings</a>
+                    <p id="settings-app-description">
+                    View settings.
+                    </p>
+                    </li>
+                </ul>
+            </nav>
+        </details>
+
+    </header>
+    
+    <!--FILES APP MAIN-->
+    <main>
+        <h1>Files App</h1>
+        <p>Here you can browse all of your files in one place.</p>
+
+        <section id="search-bar-section">
+            <h2>Search Bar</h2>
+            <form>
+                <label for="search-input">Search</label>
+                <input
+                    id="search-input" 
+                    type="text"
+                    size="50"
+                    placeholder="Search"
+                    minlength="1"
+                    maxlength="120"
+                />
+                <input type="submit" />
+            </form>
+        </section>
+
+        <section id="select-view-section">
+            <h2>Select View</h2>
+            <ul>
+                <li><a href="#list-view-section">List</a></li>
+                <li><a href="#table-view-section">Table</a></li>
+            </ul>
+        </section>
+
+        <section id="list-view-section">
+            <h2>List View</h2>
+            <ol>
+                <li>
+                    Name: recipes&#46;txt &#124; Size: <data value="123456">123 KB</data> &#124; Date modified: <time datetime="2025-08-09T11:57">2025&#47;08&#47;09 11&#58;57</time>
+                </li>
+                <li>
+                    Name: <a href="#preview-section">puffin-portrait-1280&#46;jpg</a> &#124; Size: <data value="123456">29.2 KB</data> &#124; Date modified: <time datetime="2025-08-11T11:26">2025&#47;08&#47;11 11&#58;26</time>
+                </li>  
+            </ol>
+            <p><small>Use table view for sorting details.</small></p>
+
+        </section>
+        <section id="table-view-section">
+            <h2>Table View</h2>
+            <table>
+                <caption>Files directory listing</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Modified</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Size</th>   
+                        </tr>
+                    </thead>
+                    <tbody>   
+                    <tr>
+                        <td>recipes.txt</td>
+                        <td><time datetime="2025-08-09T11:57">2025&#47;08&#47;09 11&#58;57</time></td>
+                        <td>TXT file</td>
+                        <td><data value="123456">123 KB</data></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#preview-section">puffin-portrait-1280</a></td>
+                        <td><time datetime="2025-08-11T11:26">2025&#47;08&#47;11 11&#58;26</time></td>
+                        <td>JPEG image</td>
+                        <td><data value="123456">29.2 KB</data></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Total files: 2</td>
+                        </tr>
+                    </tfoot>
+            </table>
+
+            
+        </section>
+
+        <section id="preview-section">
+            <h2>Preview</h2>
+
+            <figure>
+                <picture>
+                    <source type="image/webp" srcset="./resources/puffin-portrait.webp"/>
+                    <source type="image/avif" srcset="./resources/puffin-portrait.avif" />
+                    <img 
+                        src="./resources/puffin-portrait-1280.jpg"
+                        srcset="./resources/puffin-portrait-640.jpg 640w, ./resources/puffin-portrait-1280.jpg 1280w"
+                        sizes="(max-width: 700px) 640px, 1280px"
+                        alt="Atlantic puffin standing on a mossy cliff edge, looking to the right, with blurred cliffs and overcast sky in the background."
+                    />
+                </picture>
+                <figcaption>Atlantic Puffin, photograph by Tomáš Malík, June 2019</figcaption>
+            </figure>
+
+        </section>
+
+        <section id="metadata-section">
+
+            <h2>Metadata</h2>
+
+            <dl>
+                <dt>
+                    Name
+                </dt>
+                <dd>
+                    puffin-portrait-1280
+                </dd>
+                <dt>
+                    MIME Type
+                </dt>
+                <dd>
+                    image/jpeg
+                </dd>
+                <dt>
+                    Size
+                </dt>
+                <dd>
+                    29.2 KB
+                </dd>
+                <dt>
+                    Modified
+                </dt>
+                <dd>
+                    <time datetime="2025-08-11T14:26">2025-08-11 11:26</time>
+                </dd>
+                <dt>
+                    Path
+                </dt>
+                <dd>C:\Users\Jane\repos\html-desktop-sim\resources\puffin-portrait-1280.jpg</dd>
+            </dl>
+        </section>
+
+    </main>
+
+    <footer aria-label="status bar">
+        <h2>Task Bar</h2>
+        <nav aria-label="task-bar">
+            <ul>
+                <li><a href="./boot.html">Desktop</a></li>
+                <li><a href="./files.html" aria-current="page">Files &#40;you are here&#41;</a></li>
+                <li><a href="./media.html">Media</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+            
+        </nav>
+        <h2>Status Info</h2>
+        <dl aria-label="status info">
+            <dt>Clock</dt>
+            <dd><time datetime="2025-08-09T11:32">11:32</time></dd>
+            <dt>Active app</dt>
+            <dd><a href="./files.html">Files</a></dd>
+            <dt>Network</dt>
+            <dd><data value="offline">Offline</data></dd>
+            <dt id="battery-meter-label">Battery</dt>
+            <dd>67% <meter aria-labelledby="battery-meter-label" value="0.67"></meter></dd>
+            <dt id="transfer-progress-label">Transfers</dt>
+            <dd>14% <progress aria-labelledby="transfer-progress-label" value=".14"></progress></dd>
+            <dt>Notifications</dt>
+            <dd>
+                <div class="notification" aria-live="polite">
+                    <p>Network offline.</p>
+                </div>
+            </dd>
+        </dl>
+    </footer>
+</body>
+</html>
