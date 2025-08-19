@@ -6,6 +6,10 @@
     <title>Settings | HTML5 Desktop Sim</title>
 </head>
 <body>
+    <!--SKIP TO MAIN-->
+    <a href="#main">Skip to main</a>
+
+    <!--PERSISTENT LAUNCHER AND QUICK LINKS-->
     <header>
         <a href="./index.html">Back to desktop</a>
         <details>
@@ -34,15 +38,76 @@
     </header>
     
     <!-- SETTINGS MAIN-->
-    <main>
+    <main  id="main">
         <h1>Settings</h1>
+        <p>Change preferences for the desktop.</p>
+
+        <nav aria-label="Settings sections">
+            <ul>
+                <li><a href="#general">General</a></li>
+                <li><a href="#display">Display</a></li>
+                <li><a href="#sound">Sound</a></li>
+                <li><a href="#network">Network</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+            </ul>
+        </nav>
+
+        <!--SETTINGS SECTIONS PAGE-LEVEL FORM--->
+        <form>
+            <!--GENERAL-->
+            <section id="general">
+                <h2>General</h2>
+                <fieldset>
+                    <legend></legend>
+                </fieldset>
+            </section>
+
+            <!--DISPLAY-->
+            <section id="display">
+                <h2>Display</h2>
+                <fieldset>
+                    <legend></legend>
+                    <!--TO DO-->
+                </fieldset>
+            </section>
+
+            <!--SOUND-->
+            <section id="sound">
+                <h2>Sound</h2>
+                <fieldset>
+                    <legend></legend>
+                    <!--TO DO-->
+                </fieldset>
+
+            </section>
+
+            <!--NETWORK-->
+            <section id="network">
+                <h2>Network</h2>
+                <fieldset>
+                    <legend></legend>
+                    <!--TO DO-->
+                </fieldset>
+            </section>
+
+            <!--ACCESSIBILITY-->
+            <section id="accessibility">
+                <h2>Accessibility</h2>
+                <fieldset>
+                    <legend></legend>
+                    <!--TO DO-->
+                </fieldset>
+            </section>
+        </form>
+
     </main>
 
+    <!--PERSISTENT STATUS BAR-->
     <footer aria-label="status bar">
         <h2>Task Bar</h2>
         <nav aria-label="task-bar">
             <ul>
-                <li><a href="./boot.html">Desktop</a></li>
+                <li><a href="./index.html">Desktop</a></li>
                 <li><a href="./files.html">Files</a></li>
                 <li><a href="./media.html">Media</a></li>
                 <li><a href="./settings.html" aria-current="page">Settings &#40;you are here&#41;</a></li>
@@ -54,7 +119,7 @@
             <dt>Clock</dt>
             <dd><time datetime="2025-08-09T11:32">11:32</time></dd>
             <dt>Active app</dt>
-            <dd><a href="./media.html">Media</a></dd>
+            <dd><a href="./media.html">Settings</a></dd>
             <dt>Network</dt>
             <dd><data value="offline">Offline</data></dd>
             <dt id="battery-meter-label">Battery</dt>

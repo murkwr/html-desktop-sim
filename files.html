@@ -6,8 +6,12 @@
     <title>Files | HTML5 Desktop Sim</title>
 </head>
 <body>
+    <!--SKIP TO MAIN-->
+    <a href="#main">Skip to main</a>
+
+    <!--PERSISTENT LAUNCHER AND QUICK LINKS-->
     <header>
-        <a href="./index.html">Back to desktop</a>
+        <a href="#main">Skip to main</a>
         <details>
             <summary>Launcher</summary>
             <nav id="app-launcher-nav" aria-label="app launcher">
@@ -34,10 +38,11 @@
     </header>
     
     <!--FILES APP MAIN-->
-    <main>
+    <main id="main">
         <h1>Files App</h1>
-        <p>Here you can browse all of your files in one place.</p>
+        <p>Browse files.</p>
 
+        <!--FILES SECTIONS-->
         <section id="search-bar-section">
             <h2>Search Bar</h2>
             <form>
@@ -168,11 +173,12 @@
 
     </main>
 
+    <!--PERSISTENT STATUS BAR-->
     <footer aria-label="status bar">
         <h2>Task Bar</h2>
         <nav aria-label="task-bar">
             <ul>
-                <li><a href="./boot.html">Desktop</a></li>
+                <li><a href="./index.html">Desktop</a></li>
                 <li><a href="./files.html" aria-current="page">Files &#40;you are here&#41;</a></li>
                 <li><a href="./media.html">Media</a></li>
                 <li><a href="./settings.html">Settings</a></li>

@@ -6,8 +6,12 @@
     <title>Media | HTML5 Desktop Sim</title>
 </head>
 <body>
+    <!--SKIP TO MAIN-->
+    <a href="#main">Skip to main</a>
+
+    <!--PERSISTENT LAUNCHER AND QUICK LINKS-->
     <header>
-        <a href="./index.html">Back to desktop</a>
+        <a href="#main">Skip to main</a>
         <details>
             <summary>Launcher</summary>
             <nav id="app-launcher-nav" aria-label="app launcher">
@@ -34,9 +38,11 @@
     </header>
     
     <!-- MEDIA APP MAIN-->
-    <main>
+    <main id="main">
         <h1>Media App</h1>
+        <p>View and play multimedia.</p>
 
+        <!--MEDIA SECTIONS-->
         <!--VIDEO-->
         <section id="video-section">
             <h2>Video</h2>
@@ -86,11 +92,13 @@
 
         
     </main>
+
+    <!--PERSISTENT STATUS BAR-->
     <footer aria-label="status bar">
         <h2>Task Bar</h2>
         <nav aria-label="task-bar">
             <ul>
-                <li><a href="./boot.html">Desktop</a></li>
+                <li><a href="./index.html">Desktop</a></li>
                 <li><a href="./files.html">Files</a></li>
                 <li><a href="./media.html" aria-current="page">Media &#40;you are here&#41;</a></li>
                 <li><a href="./settings.html">Settings</a></li>

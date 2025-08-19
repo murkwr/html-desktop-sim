@@ -3,23 +3,23 @@
 A semantic, framework-free **desktop simulation** used as a learning benchmark and a living lab.  
 Built to practice **HTML5 semantics & accessibility** first, then layer minimal CSS/JS and **security thinking** as the project grows.
 
-> Part of my path through FreeCodeCamp’s Full Stack curriculum and a transition toward **SOC Analyst** work. The “OS” model lets me add modular apps, each exercising a concrete concept.
+> It aligns with the spirit of the [freeCodeCamp](https://www.freecodecamp.org/) curriculum, but all code and structure here are original and focused on real‑world a11y habits. The “OS” model lets me add modular apps, each exercising a concrete concept.
 
 ---
 
 ## Why this exists
 
-- **Semantics before styling** — pages read cleanly without CSS/JS.  
-- **Accessibility by default** — WCAG-oriented checks in the workflow.  
-- **Security mindset early** — features double as logging/triage scenarios.  
-- **Low-dependency** — no build step; static hosting works.  
-- **Portfolio with proof** — each feature maps to a learning goal and write-up.
+- **Semantics before styling**: pages read cleanly without CSS/JS.  
+- **Accessibility by default**: WCAG-oriented checks in the workflow.  
+- **Security mindset early**: features double as logging/triage scenarios.  
+- **Low-dependency**: no build step; static hosting works.  
+- **Portfolio with proof**: each feature maps to a learning goal and write-up.
 
 ---
 
 ## Current Features
 
-- **Boot / Index** — entry into the desktop environment; clear, navigable structure.
+- **Boot / Index**: entry into the desktop environment; clear, navigable structure.
 
 - **Files App**
   - Two views: **List** (`<ol>`) and **Table** (`<table>` with `<thead>`, `<tbody>`, `<tfoot>`).  
@@ -37,12 +37,12 @@ Built to practice **HTML5 semantics & accessibility** first, then layer minimal 
 
 ## Planned / In Progress
 
-- **Settings** — semantic form patterns (`<form>`, `<fieldset>`, `<legend>`, `<label>`, native validation).  
-- **Event Viewer** — synthetic “system” logs; export as JSON/NDJSON for SIEM practice.  
-- **Network Panel** — visualize mock HTTP requests/responses + security headers.  
-- **Security Center** — guided responses and mini incident playbooks.  
-- **Terminal** — constrained command input to parse/search logs.  
-- **CSS Layering** — tokens for typography, spacing, focus states, reduced motion.
+- **Settings**: semantic form patterns (`<form>`, `<fieldset>`, `<legend>`, `<label>`, native validation).  
+- **Event Viewer**: synthetic “system” logs; export as JSON/NDJSON for SIEM practice.  
+- **Network Panel**: visualize mock HTTP requests/responses + security headers.  
+- **Security Center**: guided responses and mini incident playbooks.  
+- **Terminal**: constrained command input to parse/search logs.  
+- **CSS Layering**: tokens for typography, spacing, focus states, reduced motion.
 
 ---
 
@@ -66,6 +66,7 @@ Built to practice **HTML5 semantics & accessibility** first, then layer minimal 
 
 ## Project Structure
 
+'''
 html5-desktop-sim/
 ├─ index.html       # Boot/landing
 ├─ files.html      # Files app (list/table, preview, metadata)
@@ -84,6 +85,7 @@ html5-desktop-sim/
 │  ├─ puffin-portrait-640.jpg
 │  └─ puffin-portrait-1280.jpg
 └─ README.md
+'''
 
 ---
 
@@ -95,7 +97,7 @@ html5-desktop-sim/
 
 ## License
 This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute with attribution.  
+You can copy, adapt, and use this repo for workshops or lessons with attribution. 
 
 ---
 
