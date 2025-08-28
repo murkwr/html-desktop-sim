@@ -1,121 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media | HTML5 Desktop Sim</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--SKIP TO MAIN-->
+    <a href="#main">Skip to main</a>
+
+    <!--PERSISTENT LAUNCHER AND QUICK LINKS-->
     <header>
-        <a href="./index.html">Back to desktop</a>
-        <details>
-            <summary>Launcher</summary>
-            <nav id="app-launcher-nav" aria-label="app launcher">
-                <ul>
-                    <li><a href="./files.html" aria-describedby="files-app-description">Files</a>
-                    <p id="files-app-description">
-                    Browse files.
-                    </p>
-                    </li>
-                    <li><a href="./media.html" aria-describedby="media-app-description">Media</a>
-                    <p id="media-app-description">
-                    Play media.
-                    </p>
-                    </li>
-                    <li><a href="./settings.html" aria-describedby="settings-app-description">Settings</a>
-                    <p id="settings-app-description">
-                    View settings.
-                    </p>
-                    </li>
-                </ul>
-            </nav>
-        </details>
-
-    </header>
-    
-    <!-- MEDIA APP MAIN-->
-    <main>
-        <h1>Media App</h1>
-
-        <!--VIDEO-->
-        <section id="video-section">
-            <h2>Video</h2>
-            <video controls poster="./resources/dove_poster.webp">
-                <source src="./resources/dove_video.webm" type="video/webm" />
-                <source src="./resources/dove_video.mp4" type="video/mp4" />
-                <track 
-                    default
-                    src="./resources/dove_transcript_en.vtt"
-                    kind="subtitles"
-                    srclang="en"
-                    label="English"
-                />
-                <track 
-                    src="./resources/dove_transcript_it.vtt"
-                    kind="subtitles"
-                    srclang="it"
-                    label="Italian"
-                />
-            </video>
-
-
-        </section>
-
-        <!--TRANSCRIPT-->
-        <section id="transcript-section">
-            <h2>Transcript</h2>
-            <details>
-                <summary>English</summary>
-                <p>You are looking at Dove, the amazing new beauty discovery. See, even the shape of this new bath and toilet bar is different—modern, curved to fit your hand. You use Dove like soap, but Dove is completely new—revolutionary, much better for your skin. Every bar of Dove is one quarter cleansing cream. Dove is one quarter cleansing cream. Soap dries your skin, but Dove creams your skin while you wash. Dove’s rich lather cleans and creams your skin at the same time. Dove is two blessings in one. You can feel the cream in Dove; you can smell Dove’s creamy fragrance. Dove leaves your skin—your hands, all of you—soft and smooth. Lever Brothers guarantees that Dove is better for your skin than any soap, or your money back.</p>
-            </details>
-            <details>
-                <summary>Italian</summary>
-                <p>State guardando Dove, la straordinaria nuova scoperta di bellezza. Vedete? Anche la forma di questa nuova saponetta da bagno e da toilette è diversa: moderna, curva per adattarsi alla mano. Si usa Dove come un sapone, ma Dove è completamente nuova — rivoluzionaria, molto migliore per la vostra pelle. Ogni saponetta Dove è per un quarto crema detergente. Dove è per un quarto crema detergente. Il sapone secca la pelle, ma Dove la nutre mentre vi lavate. La ricca schiuma di Dove pulisce e nutre la pelle allo stesso tempo. Dove è due benefici in uno. Potete sentire la crema in Dove; potete sentirne il profumo cremoso. Dove lascia la vostra pelle — le mani, tutto il corpo — morbida e liscia. Lever Brothers garantisce che Dove è migliore per la vostra pelle di qualsiasi sapone, o vi rimborsa il denaro.</p>
-            </details>
-        </section>
-
-        <!--AUDIO-->
-        <section id="audio-section">
-            <h2>Audio</h2>
-            <p>Drifting by VTEMO</p>
-            <audio controls loop>
-                <source src="./resources/drifting.ogg" type="audio/ogg" class="song-drifting" />
-                <source src="./resources/drifting.mp3" type="audio/mpeg" class="song-drifting"/>
-            </audio>
-        </section>
-
-        
-    </main>
-    <footer aria-label="status bar">
-        <h2>Task Bar</h2>
-        <nav aria-label="task-bar">
-            <ul>
-                <li><a href="./boot.html">Desktop</a></li>
-                <li><a href="./files.html">Files</a></li>
-                <li><a href="./media.html" aria-current="page">Media &#40;you are here&#41;</a></li>
-                <li><a href="./settings.html">Settings</a></li>
-            </ul>
-            
+      <a href="#main">Skip to main</a>
+      <details>
+        <summary>Launcher</summary>
+        <nav id="app-launcher-nav" aria-label="app launcher">
+          <ul>
+            <li>
+              <a href="./files.html" aria-describedby="files-app-description"
+                >Files</a
+              >
+              <p id="files-app-description">Browse files.</p>
+            </li>
+            <li>
+              <a href="./media.html" aria-describedby="media-app-description"
+                >Media</a
+              >
+              <p id="media-app-description">Play media.</p>
+            </li>
+            <li>
+              <a
+                href="./settings.html"
+                aria-describedby="settings-app-description"
+                >Settings</a
+              >
+              <p id="settings-app-description">View settings.</p>
+            </li>
+          </ul>
         </nav>
-        <h2>Status Info</h2>
-        <dl aria-label="status info">
-            <dt>Clock</dt>
-            <dd><time datetime="2025-08-09T11:32">11:32</time></dd>
-            <dt>Active app</dt>
-            <dd><a href="./media.html">Media</a></dd>
-            <dt>Network</dt>
-            <dd><data value="offline">Offline</data></dd>
-            <dt id="battery-meter-label">Battery</dt>
-            <dd>67% <meter aria-labelledby="battery-meter-label" value="0.67"></meter></dd>
-            <dt id="transfer-progress-label">Transfers</dt>
-            <dd>14% <progress aria-labelledby="transfer-progress-label" value=".14"></progress></dd>
-            <dt>Notifications</dt>
-            <dd>
-                <div class="notification" aria-live="polite">
-                    <p>Network offline.</p>
-                </div>
-            </dd>
-        </dl>
+      </details>
+    </header>
+
+    <!-- MEDIA APP MAIN-->
+    <main id="main">
+      <h1>Media App</h1>
+      <p>View and play multimedia.</p>
+
+      <!--MEDIA SECTIONS-->
+      <!--VIDEO-->
+      <section id="video-section">
+        <h2>Video</h2>
+        <video controls poster="./resources/dove_poster.webp">
+          <source src="./resources/dove_video.webm" type="video/webm" />
+          <source src="./resources/dove_video.mp4" type="video/mp4" />
+          <track
+            default
+            src="./resources/dove_transcript_en.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+          />
+          <track
+            src="./resources/dove_transcript_it.vtt"
+            kind="subtitles"
+            srclang="it"
+            label="Italian"
+          />
+        </video>
+      </section>
+
+      <!--TRANSCRIPT-->
+      <section id="transcript-section">
+        <h2>Transcript</h2>
+        <details>
+          <summary>English</summary>
+          <p>
+            You are looking at Dove, the amazing new beauty discovery. See, even
+            the shape of this new bath and toilet bar is different—modern,
+            curved to fit your hand. You use Dove like soap, but Dove is
+            completely new—revolutionary, much better for your skin. Every bar
+            of Dove is one quarter cleansing cream. Dove is one quarter
+            cleansing cream. Soap dries your skin, but Dove creams your skin
+            while you wash. Dove’s rich lather cleans and creams your skin at
+            the same time. Dove is two blessings in one. You can feel the cream
+            in Dove; you can smell Dove’s creamy fragrance. Dove leaves your
+            skin—your hands, all of you—soft and smooth. Lever Brothers
+            guarantees that Dove is better for your skin than any soap, or your
+            money back.
+          </p>
+        </details>
+        <details>
+          <summary>Italian</summary>
+          <p>
+            State guardando Dove, la straordinaria nuova scoperta di bellezza.
+            Vedete? Anche la forma di questa nuova saponetta da bagno e da
+            toilette è diversa: moderna, curva per adattarsi alla mano. Si usa
+            Dove come un sapone, ma Dove è completamente nuova — rivoluzionaria,
+            molto migliore per la vostra pelle. Ogni saponetta Dove è per un
+            quarto crema detergente. Dove è per un quarto crema detergente. Il
+            sapone secca la pelle, ma Dove la nutre mentre vi lavate. La ricca
+            schiuma di Dove pulisce e nutre la pelle allo stesso tempo. Dove è
+            due benefici in uno. Potete sentire la crema in Dove; potete
+            sentirne il profumo cremoso. Dove lascia la vostra pelle — le mani,
+            tutto il corpo — morbida e liscia. Lever Brothers garantisce che
+            Dove è migliore per la vostra pelle di qualsiasi sapone, o vi
+            rimborsa il denaro.
+          </p>
+        </details>
+      </section>
+
+      <!--AUDIO-->
+      <section id="audio-section">
+        <h2>Audio</h2>
+        <p>Drifting by VTEMO</p>
+        <audio controls loop>
+          <source
+            src="./resources/drifting.ogg"
+            type="audio/ogg"
+            class="song-drifting"
+          />
+          <source
+            src="./resources/drifting.mp3"
+            type="audio/mpeg"
+            class="song-drifting"
+          />
+        </audio>
+      </section>
+    </main>
+
+    <!--PERSISTENT STATUS BAR-->
+    <footer aria-label="status bar">
+      <h2>Task Bar</h2>
+      <nav aria-label="task-bar">
+        <ul>
+          <li><a href="./index.html">Desktop</a></li>
+          <li><a href="./files.html">Files</a></li>
+          <li>
+            <a href="./media.html" aria-current="page"
+              >Media &#40;you are here&#41;</a
+            >
+          </li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </nav>
+      <h2>Status Info</h2>
+      <dl aria-label="status info">
+        <dt>Clock</dt>
+        <dd><time datetime="2025-08-09T11:32">11:32</time></dd>
+        <dt>Active app</dt>
+        <dd><a href="./media.html">Media</a></dd>
+        <dt>Network</dt>
+        <dd><data value="offline">Offline</data></dd>
+        <dt id="battery-meter-label">Battery</dt>
+        <dd>
+          67% <meter aria-labelledby="battery-meter-label" value="0.67"></meter>
+        </dd>
+        <dt id="transfer-progress-label">Transfers</dt>
+        <dd>
+          14%
+          <progress
+            aria-labelledby="transfer-progress-label"
+            value=".14"
+          ></progress>
+        </dd>
+        <dt>Notifications</dt>
+        <dd>
+          <div class="notification" aria-live="polite">
+            <p>Network offline.</p>
+          </div>
+        </dd>
+      </dl>
     </footer>
-</body>
+  </body>
 </html>

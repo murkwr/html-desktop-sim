@@ -1,0 +1,181 @@
+/* Core tokens */
+
+:root {
+  --fs-base: 16px;
+  --lh-base: 1.5;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 2rem;
+
+  --surface: #f6f6f7;
+  --text: #1b1f23;
+  --border: #d0d7de;
+
+  --focus-ring: 2px solid #0a66ff;
+  --focus-offset: 3px;
+
+  --measure: 70ch; /* comfortable reading width */
+}
+
+/* 2) Global base */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--text);
+  margin: 0; /* remove browser default */
+}
+
+/* Central column */
+main {
+  max-width: var(--measure);
+  padding: var(--space-6) var(--space-4);
+}
+
+/* Consistent vertical rhythm */
+main > * + * {
+  margin-block-start: var(--space-4);
+}
+section > * + * {
+  margin-block-start: var(--space-3);
+}
+
+/*  Make fieldsets look like cards */
+fieldset {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: var(--space-4);
+}
+legend {
+  padding: 0 var(--space-2);
+  font-weight: 600;
+}
+
+:focus {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improve focus on form controls with their own border */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(10, 102, 255, 0.25);
+}
+
+@media (forced-colors: active) {
+  :focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+}
+
+header {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+header > a[href^="#"] {
+  position: absolute;
+  left: -9999px; /* visually hidden off-screen */
+}
+header > a[href^="#"]:focus-visible {
+  position: static; /* bring it back */
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 0.25rem;
+}
+details[open] summary {
+  margin-block-end: var(--space-2);
+}
+
+/* Stack sections nicely */
+form section {
+  padding-block: var(--space-4);
+}
+
+/* Space inside each fieldset */
+fieldset {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Put radio/checkbox label text on one line with controls */
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Range outputs sit closer to their inputs */
+output {
+  margin-inline-start: var(--space-2);
+}
+
+/* Buttons row */
+#save-btn,
+#reset-btn {
+  margin-inline-end: var(--space-2);
+}
+
+@media (min-width: 48rem) {
+  /* Two-column internal grids where it helps */
+  #display fieldset,
+  #sound fieldset {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  /* Make long items span both columns */
+  #display legend,
+  #sound legend {
+    grid-column: 1 / -1;
+  }
+  #display output,
+  #sound output {
+    grid-column: 1 / -1;
+  }
+}
+
+footer {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: var(--space-3);
+}
+footer nav a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+dl[aria-label="status info"] {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-4);
+}
+
